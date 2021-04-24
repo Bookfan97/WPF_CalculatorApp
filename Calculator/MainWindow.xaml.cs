@@ -152,6 +152,11 @@ namespace Calculator
         }
         public static double Divide( double n1, double n2)
         {
+            if(n2 == 0)
+            {
+                MessageBox.Show("DIVIDE BY ZERO ERROR", "WRONG OPERATION", MessageBoxButton.OK, MessageBoxImage.Error);
+                return 0;
+            }
             return n1 / n2;
         }
     }
