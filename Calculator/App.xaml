@@ -4,6 +4,30 @@
              xmlns:local="clr-namespace:Calculator"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+      <SolidColorBrush x:Key="NumbersColor" Color="#444444"/>
+      <SolidColorBrush x:Key="OperatorsColor" Color="Orange"/>
+      <SolidColorBrush x:Key="ForegroundColor" Color="White"/>
+      <Style TargetType="Button">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="25"/>
+        <Setter Property="Margin" Value="5"/>
+      </Style>
+      <Style TargetType="Label">
+        <Setter Property="FontSize" Value="70"/>
+        <Setter Property="Foreground" Value="White"/>
+      </Style>
+      <Style TargetType="Button" x:Key="NumberButtons">
+        <Setter Property="Background" Value="{StaticResource NumbersColor}"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="25"/>
+        <Setter Property="Margin" Value="5"/>
+      </Style>
+      <Style TargetType="Button" x:Key="OperatorButtons" BasedOn="{StaticResource NumberButtons}">
+        <Setter Property="Background" Value="{StaticResource OperatorsColor}"/>
+      </Style>
+      <Style TargetType="Button" x:Key="OtherButtons" BasedOn="{StaticResource NumberButtons}">
+        <Setter Property="Background" Value="LightGray"/>
+        <Setter Property="Foreground" Value="Black"/>
+      </Style>
     </Application.Resources>
 </Application>
